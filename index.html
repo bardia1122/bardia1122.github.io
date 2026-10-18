@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bardia Sabagh Kermani</title>
+  <meta name="description" content="Computer Engineering undergraduate working on computer vision, efficient on-device deep learning, and graph neural networks.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>Bardia Sabagh Kermani</h1>
+      <p class="tagline">Undergraduate Student, Computer Engineering &middot; Amirkabir University of Technology</p>
+      <p class="meta">Tehran, Iran &middot; <a href="mailto:bardia112@gmail.com">bardia112@gmail.com</a></p>
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#more">More</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>Research Interests</h2>
+      <ul class="tags">
+        <li>Computer Vision</li>
+        <li>Efficient &amp; On-Device Deep Learning</li>
+        <li>Graph Neural Networks</li>
+        <li>Datasets &amp; Benchmarking</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <article>
+        <h3>B.S. in Computer Engineering</h3>
+        <p class="sub">Amirkabir University of Technology, Tehran, Iran <span class="date">2022 &ndash; Feb 2027 (expected)</span></p>
+        <ul>
+          <li>CGPA: 17.56 / 20 (3.64 / 4.0)</li>
+          <li>Last 64 credits: 18.64 / 20 (3.97 / 4.0)</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="research">
+      <h2>Research Experience</h2>
+
+      <article>
+        <h3>Research Assistant, Data Science Lab</h3>
+        <p class="sub">Advisor: Dr. Mostafa Chehreghani <span class="date">2026 &ndash; Present</span></p>
+        <ul>
+          <li>Researching LLM integration into GNNs and knowledge graphs.</li>
+          <li>Conducting an ablation study of TxGNN (Nature Medicine, 2024), testing whether its zero-shot drug-repurposing gains stem from prior clinical knowledge rather than learned GNN representations (comment paper in preparation).</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Research Assistant, Intelligent Computing &amp; Communication Infrastructure Lab (ICCI)</h3>
+        <p class="sub">Advisor: Dr. Hamed Farbeh <span class="date">2025 &ndash; 2026</span></p>
+        <p>Real-time, on-device obstacle detection for pedestrian safety; three manuscripts under review.</p>
+      </article>
+
+      <h3 class="subhead">Manuscripts Under Review <small>Preprints forthcoming on arXiv</small></h3>
+      <ol class="papers">
+        <li>
+          A. Zandi, S. Nami, R. Ganjipour, <strong>B. Sabagh Kermani</strong>, A. Tarabkhah, H. Farbeh.
+          <strong>Real-Time Obstacle Detection and Distance Estimation on Smartphones for Visually Impaired and Distracted Pedestrians.</strong>
+          Submitted to <em>IEEE Transactions on Intelligent Transportation Systems</em>.
+          <p class="role"><em>My role:</em> contributed to implementing the early-exit heads, and implemented ARCore depth-based distance estimation with a monocular focal-length fallback and the on-device benchmarks; the compressed YOLOv8n ran up to 8&times; faster on a mid-range phone (3.2 s &rarr; 0.39 s), recommended setup at 0.42&ndash;0.48 s with 0.81 recall.</p>
+        </li>
+        <li>
+          A. Zandi, A. Azami, <strong>B. Sabagh Kermani</strong>, P. Abbasian, R. Ganjipour, S. Nami, H. Farbeh.
+          <strong>ROD-Dataset: A Pedestrian-Perspective Benchmark of 25 Urban Obstacle Classes for Real-Time Detection.</strong>
+          Under review.
+          <p class="role">24,326 images and 40,195 annotated instances across 25 classes, merging 29 public collections with street-level imagery captured in Tehran and Toronto. Benchmarked six YOLO generations (v8&ndash;v26), showing recall and mAP rankings disagree; open source (MIT) with 88K+ Hugging Face downloads.</p>
+          <p class="role"><em>My role:</em> collected and annotated part of the field-captured imagery.</p>
+        </li>
+        <li>
+          A. Zandi, A. Ashrafi, S. Nami, S. S. Neghahban, A. Entezari, P. Abbasian, A. Azami, P. Taherzadeh, <strong>B. Sabagh Kermani</strong>, R. Ganjipour, H. Farbeh.
+          <strong>From White Canes to Edge AI: A Survey of Assistive Navigation Technologies for Blind and Low-Vision Individuals.</strong>
+          <p class="role">PRISMA-based review of 108 studies (2008&ndash;2026) in a four-era taxonomy; contributed the literature review of lightweight YOLO methods (pruning, quantization, attention) for its edge-optimization synthesis.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <article>
+        <h3>Backend &amp; AI Platform Engineer, Shatel AI</h3>
+        <p class="sub">Tehran <span class="date">Nov 2024 &ndash; Nov 2025</span></p>
+        <ul>
+          <li>Co-architected and deployed production RAG chatbot platforms (vector retrieval + LLM inference) for Sales, Support, and Lead Generation.</li>
+          <li>Built high-concurrency API infrastructure (REST/gRPC/WebSocket, Redis, PostgreSQL) with full observability of latency and AI service health.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Notable Project</h2>
+      <article>
+        <h3>IO Motion: On-Device Pose Estimation &amp; Fitness Analysis</h3>
+        <p>Android app (Kotlin, MediaPipe Pose Landmarker) analyzing squats, sit-ups, push-ups, and planks from live camera or video: rep counting, biomechanical KPI scoring, fully offline.</p>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills &amp; Expertise</h2>
+      <dl>
+        <dt>Computer Vision &amp; Deep Learning</dt>
+        <dd>PyTorch, Ultralytics/YOLO, Object Detection, Pose Estimation, Model Compression, PyG</dd>
+        <dt>Programming Languages</dt>
+        <dd>Python, Kotlin, Java, C/C++</dd>
+        <dt>Technologies &amp; Tools</dt>
+        <dd>Docker, Prometheus, Grafana, Git, LaTeX</dd>
+      </dl>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching Assistantships</h2>
+      <article>
+        <h3>Data Mining (Head TA)</h3>
+        <p class="sub">Instructor: Dr. Ehsan Nazerfard <span class="date">Fall '25, Spring '26</span></p>
+        <ul><li>Led TA team; designed &amp; graded HWs, quizzes, and exams</li><li>Conducted supplementary teaching sessions</li></ul>
+      </article>
+      <article>
+        <h3>Microprocessor and Assembly Language</h3>
+        <p class="sub">Instructor: Dr. Hamed Farbeh <span class="date">Fall '25</span></p>
+        <ul><li>Designed course project and graded student submissions</li></ul>
+      </article>
+      <article>
+        <h3>Algorithm Design / Data Structures &amp; Algorithms</h3>
+        <p class="sub">Instructor: Dr. Alireza Bagheri <span class="date">Spring '25, Fall '25</span></p>
+        <ul><li>Prepared and graded homework assignments</li></ul>
+      </article>
+    </section>
+
+    <section id="more">
+      <h2>Courses &amp; Certifications</h2>
+      <ul>
+        <li>CS231N: Deep Learning for Computer Vision, Stanford (Fei-Fei Li) &mdash; online</li>
+        <li>CS236: Deep Generative Models, Stanford (Stefano Ermon) &mdash; online</li>
+        <li>CS224W: Machine Learning with Graphs, Stanford (Jure Leskovec) &mdash; online</li>
+        <li>Big Data Analysis (Graduate Course; Grade: 18/20), AUT (Dr. Mostafa Chehreghani)</li>
+      </ul>
+
+      <h2>Honors &amp; Awards</h2>
+      <ul>
+        <li>Placed 6th in the Fito Hackathon, a national Data Science &amp; Image Processing competition.</li>
+        <li>Ranked among the top 10 contestants in the AlgoCup coding competition.</li>
+      </ul>
+
+      <h2>Spoken Languages</h2>
+      <ul>
+        <li>English (TOEFL iBT 5.5/6.0; 110/120 on the previous scale)</li>
+        <li>Persian (native)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Last updated October 2026</p>
+  </footer>
+</body>
+</html>
