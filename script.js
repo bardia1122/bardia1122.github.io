@@ -16,8 +16,6 @@
     });
   }
 
-  var print = document.getElementById("print-cv");
-  if (print) print.addEventListener("click", function () { window.print(); });
 
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
