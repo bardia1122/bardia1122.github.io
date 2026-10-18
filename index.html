@@ -5,26 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bardia Sabagh Kermani</title>
   <meta name="description" content="Computer Engineering undergraduate working on computer vision, efficient on-device deep learning, and graph neural networks.">
+  <meta property="og:title" content="Bardia Sabagh Kermani">
+  <meta property="og:description" content="Computer Engineering undergraduate: computer vision, on-device deep learning, graph neural networks.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body id="top">
   <header class="hero">
     <div class="wrap">
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle dark mode">&#9680;</button>
+      <p class="eyebrow">Computer Engineering &middot; Tehran, Iran</p>
       <h1>Bardia Sabagh Kermani</h1>
-      <p class="tagline">Undergraduate Student, Computer Engineering &middot; Amirkabir University of Technology</p>
-      <p class="meta">Tehran, Iran &middot; <a href="mailto:bardia112@gmail.com">bardia112@gmail.com</a></p>
-      <nav>
+      <p class="tagline">Undergraduate Student, Amirkabir University of Technology</p>
+      <p class="intro">
+        I build and study deep learning systems that run where people actually are: on phones and edge devices.
+        My work spans real-time obstacle detection for pedestrian safety, benchmark datasets, and, more recently,
+        combining LLMs with graph neural networks and knowledge graphs.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="#research">See my research</a>
+        <button class="btn" type="button" id="print-cv">Save as PDF</button>
+      </div>
+      <nav aria-label="Sections">
         <a href="#research">Research</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#teaching">Teaching</a>
         <a href="#more">More</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
+    <section class="stats" aria-label="Highlights">
+      <div><strong>3</strong><span>manuscripts under review</span></div>
+      <div><strong>88K+</strong><span>Hugging Face downloads (ROD-Dataset)</span></div>
+      <div><strong>8&times;</strong><span>faster YOLOv8n on a mid-range phone</span></div>
+      <div><strong>10</strong><span>courses taught as a TA</span></div>
+    </section>
+
     <section id="about">
       <h2>Research Interests</h2>
       <ul class="tags">
@@ -33,6 +64,16 @@
         <li>Graph Neural Networks</li>
         <li>Datasets &amp; Benchmarking</li>
       </ul>
+    </section>
+
+    <section id="timeline">
+      <h2>Timeline</h2>
+      <ol class="timeline">
+        <li><span class="when">2026 &ndash; now</span><span class="what">Research Assistant, Data Science Lab: LLMs + GNNs, TxGNN ablation study</span></li>
+        <li><span class="when">2025 &ndash; 2026</span><span class="what">Research Assistant, ICCI Lab: on-device obstacle detection</span></li>
+        <li><span class="when">Nov 2024 &ndash; Nov 2025</span><span class="what">Backend &amp; AI Platform Engineer, Shatel AI</span></li>
+        <li><span class="when">2022 &ndash; Feb 2027</span><span class="what">B.S. Computer Engineering, Amirkabir University of Technology</span></li>
+      </ol>
     </section>
 
     <section id="education">
@@ -122,20 +163,56 @@
 
     <section id="teaching">
       <h2>Teaching Assistantships</h2>
+      <p class="note">Ten courses at Amirkabir University of Technology since 2023.</p>
+      <article>
+        <h3>Software Engineering</h3>
+        <p class="sub">Instructor: Dr. Gohari <span class="date">Mar 2026 &ndash; Aug 2026</span></p>
+        <ul><li>Created homework assignments and projects</li><li>Graded and evaluated student submissions</li></ul>
+      </article>
       <article>
         <h3>Data Mining (Head TA)</h3>
-        <p class="sub">Instructor: Dr. Ehsan Nazerfard <span class="date">Fall '25, Spring '26</span></p>
+        <p class="sub">Instructor: Dr. Ehsan Nazerfard <span class="date">Sep 2025 &ndash; Aug 2026</span></p>
         <ul><li>Led TA team; designed &amp; graded HWs, quizzes, and exams</li><li>Conducted supplementary teaching sessions</li></ul>
       </article>
       <article>
+        <h3>Entrepreneurship</h3>
+        <p class="sub">Instructor: Dr. Morteza Zakeri <span class="date">Sep 2025 &ndash; Feb 2026</span></p>
+        <ul><li>Created course projects and graded them</li><li>Held feedback sessions and managed project teams</li></ul>
+      </article>
+      <article>
         <h3>Microprocessor and Assembly Language</h3>
-        <p class="sub">Instructor: Dr. Hamed Farbeh <span class="date">Fall '25</span></p>
+        <p class="sub">Instructor: Dr. Hamed Farbeh <span class="date">Sep 2025 &ndash; Feb 2026</span></p>
         <ul><li>Designed course project and graded student submissions</li></ul>
       </article>
       <article>
-        <h3>Algorithm Design / Data Structures &amp; Algorithms</h3>
-        <p class="sub">Instructor: Dr. Alireza Bagheri <span class="date">Spring '25, Fall '25</span></p>
+        <h3>Data Structures and Algorithms</h3>
+        <p class="sub">Instructor: Dr. Alireza Bagheri <span class="date">Sep 2025 &ndash; Feb 2026</span></p>
         <ul><li>Prepared and graded homework assignments</li></ul>
+      </article>
+      <article>
+        <h3>Theory of Machines and Languages</h3>
+        <p class="sub">Instructor: Dr. Ameri <span class="date">Feb 2025 &ndash; Sep 2025</span></p>
+        <ul><li>Crafted course projects</li><li>Graded and evaluated student submissions</li></ul>
+      </article>
+      <article>
+        <h3>Algorithm Design</h3>
+        <p class="sub">Instructor: Dr. Alireza Bagheri <span class="date">Feb 2025 &ndash; Sep 2025</span></p>
+        <ul><li>Prepared and graded homework assignments; quiz design</li></ul>
+      </article>
+      <article>
+        <h3>Digital Logic Circuits</h3>
+        <p class="sub">Instructor: Dr. Sahebzamani <span class="date">Feb 2024 &ndash; Sep 2025</span></p>
+        <ul><li>Graded student assignments</li></ul>
+      </article>
+      <article>
+        <h3>Principles of Database Design</h3>
+        <p class="sub">Instructor: Dr. Pourbahman <span class="date">Sep 2024 &ndash; Jan 2025</span></p>
+        <ul><li>Crafted, graded, and evaluated course projects</li></ul>
+      </article>
+      <article>
+        <h3>Advanced Programming</h3>
+        <p class="sub">Instructor: Dr. Ziaeetabar <span class="date">Sep 2023 &ndash; Jan 2024</span></p>
+        <ul><li>Created supplementary videos and held make-up sessions</li><li>Created and graded projects</li><li>Held Q&amp;A sessions</li></ul>
       </article>
     </section>
 
@@ -160,10 +237,18 @@
         <li>Persian (native)</li>
       </ul>
     </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>I'm open to research collaborations and graduate opportunities in computer vision, efficient deep learning, and graph learning. The best way to reach me is by email.</p>
+      <p><a class="btn primary" href="mailto:bardia112@gmail.com">bardia112@gmail.com</a></p>
+      <!-- TODO: add GitHub / LinkedIn / Google Scholar links here -->
+    </section>
   </main>
 
   <footer class="wrap">
-    <p>Last updated October 2026</p>
+    <p>&copy; <span id="year">2026</span> Bardia Sabagh Kermani &middot; Last updated October 2026</p>
+    <a href="#top" class="to-top">Back to top &uarr;</a>
   </footer>
 </body>
 </html>
