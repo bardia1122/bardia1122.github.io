@@ -16,8 +16,8 @@
       if (t) document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=4">
-  <script src="script.js?v=4" defer></script>
+  <link rel="stylesheet" href="style.css?v=5">
+  <script src="script.js?v=5" defer></script>
 </head>
 <body id="top">
   <header class="hero">
@@ -39,7 +39,7 @@
       <div class="cta">
         <a class="btn primary" href="#contact">Get in touch</a>
         <a class="btn" href="#research">See my research</a>
-        <a class="btn" href="docs/Bardia_Sabagh_Kermani_CV.pdf" download>Download CV</a>
+        <a class="btn" href="assets/Bardia_Sabagh_Kermani_CV.pdf" download>Download CV</a>
       </div>
       <nav aria-label="Sections">
         <a href="#research">Research</a>
@@ -56,10 +56,10 @@
 
   <main class="wrap">
     <section class="stats" aria-label="Highlights">
-      <div><strong>3</strong><span>manuscripts under review</span></div>
+      <div><strong>3</strong><span>papers on arXiv, under review</span></div>
       <div><strong>88K+</strong><span>Hugging Face downloads (ROD-Dataset)</span></div>
       <div><strong>8&times;</strong><span>faster YOLOv8n on a mid-range phone</span></div>
-      <div><strong>10</strong><span>courses taught as a TA</span></div>
+      <div><strong>4</strong><span>courses as a TA, incl. Head TA</span></div>
     </section>
 
     <section id="about">
@@ -109,27 +109,31 @@
       <article>
         <h3>Research Assistant, Intelligent Computing &amp; Communication Infrastructure Lab (ICCI)</h3>
         <p class="sub">Advisor: Dr. Hamed Farbeh <span class="date">2025 &ndash; 2026</span></p>
-        <p>Real-time, on-device obstacle detection for pedestrian safety; three manuscripts under review.</p>
+        <p>Real-time, on-device obstacle detection for pedestrian safety; three manuscripts under review, all available on arXiv (listed below).</p>
       </article>
 
-      <h3 class="subhead">Manuscripts Under Review <small>Preprints forthcoming on arXiv</small></h3>
+      <h3 class="subhead">Manuscripts Under Review <small>Preprints on arXiv</small></h3>
       <ol class="papers">
         <li>
           A. Zandi, S. Nami, R. Ganjipour, <strong>B. Sabagh Kermani</strong>, A. Tarabkhah, H. Farbeh.
           <strong>Real-Time Obstacle Detection and Distance Estimation on Smartphones for Visually Impaired and Distracted Pedestrians.</strong>
-          Submitted to <em>IEEE Transactions on Intelligent Transportation Systems</em>.
+          Submitted to <em><a href="https://ietresearch.onlinelibrary.wiley.com/journal/23983396">IET Cyber-Physical Systems: Theory &amp; Applications</a></em>.
+          <span class="links"><a href="https://arxiv.org/abs/2611.00040">arXiv</a> &middot; <a href="https://github.com/Real-time-Obstacle-Detector/Android-Application">Code</a></span>
           <p class="role"><em>My role:</em> contributed to implementing the early-exit heads, and implemented ARCore depth-based distance estimation with a monocular focal-length fallback and the on-device benchmarks; the compressed YOLOv8n ran up to 8&times; faster on a mid-range phone (3.2 s &rarr; 0.39 s), recommended setup at 0.42&ndash;0.48 s with 0.81 recall.</p>
         </li>
         <li>
           A. Zandi, A. Azami, <strong>B. Sabagh Kermani</strong>, P. Abbasian, R. Ganjipour, S. Nami, H. Farbeh.
-          <strong>ROD-Dataset: A Pedestrian-Perspective Benchmark of 25 Urban Obstacle Classes for Real-Time Detection.</strong>
-          Under review.
+          <strong>ROD-Dataset: A Pedestrian-Perspective Benchmark of 25 Urban Obstacle Classes for YOLO-Based Detection.</strong>
+          Submitted to <em><a href="https://link.springer.com/journal/11042">Multimedia Tools and Applications</a></em>.
+          <span class="links"><a href="https://arxiv.org/abs/2611.00681">arXiv</a> &middot; <a href="https://www.kaggle.com/datasets/abtinzandi/obstacle-detection-dataset">Kaggle</a> &middot; <a href="https://huggingface.co/datasets/Abtinzandi/Obstacle-Detection-Dataset-YOLO">Hugging Face</a></span>
           <p class="role">24,326 images and 40,195 annotated instances across 25 classes, merging 29 public collections with street-level imagery captured in Tehran and Toronto. Benchmarked six YOLO generations (v8&ndash;v26), showing recall and mAP rankings disagree; open source (MIT) with 88K+ Hugging Face downloads.</p>
           <p class="role"><em>My role:</em> collected and annotated part of the field-captured imagery.</p>
         </li>
         <li>
           A. Zandi, A. Ashrafi, S. Nami, S. S. Neghahban, A. Entezari, P. Abbasian, A. Azami, P. Taherzadeh, <strong>B. Sabagh Kermani</strong>, R. Ganjipour, H. Farbeh.
           <strong>From White Canes to Edge AI: A Survey of Assistive Navigation Technologies for Blind and Low-Vision Individuals.</strong>
+          Submitted to <em><a href="https://www.tandfonline.com/journals/iidt20/">Disability and Rehabilitation: Assistive Technology</a></em>.
+          <span class="links"><a href="https://arxiv.org/abs/2611.00671">arXiv</a></span>
           <p class="role">PRISMA-based review of 108 studies (2008&ndash;2026) in a four-era taxonomy; contributed the literature review of lightweight YOLO methods (pruning, quantization, attention) for its edge-optimization synthesis.</p>
         </li>
       </ol>
@@ -138,7 +142,7 @@
     <section id="experience">
       <h2>Work Experience</h2>
       <article>
-        <h3>Backend &amp; AI Platform Engineer, Shatel AI</h3>
+        <h3>Backend &amp; AI Platform Engineer, <a href="https://ai.shatel.ir">Shatel AI</a></h3>
         <p class="sub">Tehran <span class="date">Nov 2024 &ndash; Nov 2025</span></p>
         <ul>
           <li>Co-architected and deployed production RAG chatbot platforms (vector retrieval + LLM inference) for Sales, Support, and Lead Generation.</li>
@@ -150,7 +154,7 @@
     <section id="projects">
       <h2>Notable Project</h2>
       <article>
-        <h3>IO Motion: On-Device Pose Estimation &amp; Fitness Analysis</h3>
+        <h3>IO Motion: On-Device Pose Estimation &amp; Fitness Analysis <a class="links" href="https://github.com/bardia1122/IO_motion">GitHub</a></h3>
         <p>Android app (Kotlin, MediaPipe Pose Landmarker) analyzing squats, sit-ups, push-ups, and planks from live camera or video: rep counting, biomechanical KPI scoring, fully offline.</p>
       </article>
     </section>
@@ -169,55 +173,24 @@
 
     <section id="teaching">
       <h2>Teaching Assistantships</h2>
-      <p class="note">Ten courses at Amirkabir University of Technology since 2023.</p>
-      <article>
-        <h3>Software Engineering</h3>
-        <p class="sub">Instructor: Dr. Gohari <span class="date">Mar 2026 &ndash; Aug 2026</span></p>
-        <ul><li>Created homework assignments and projects</li><li>Graded and evaluated student submissions</li></ul>
-      </article>
       <article>
         <h3>Data Mining (Head TA)</h3>
-        <p class="sub">Instructor: Dr. Ehsan Nazerfard <span class="date">Sep 2025 &ndash; Aug 2026</span></p>
+        <p class="sub">Instructor: Dr. Ehsan Nazerfard <span class="date">Fall '25, Spring '26</span></p>
         <ul><li>Led TA team; designed &amp; graded HWs, quizzes, and exams</li><li>Conducted supplementary teaching sessions</li></ul>
       </article>
       <article>
-        <h3>Entrepreneurship</h3>
-        <p class="sub">Instructor: Dr. Morteza Zakeri <span class="date">Sep 2025 &ndash; Feb 2026</span></p>
-        <ul><li>Created course projects and graded them</li><li>Held feedback sessions and managed project teams</li></ul>
-      </article>
-      <article>
         <h3>Microprocessor and Assembly Language</h3>
-        <p class="sub">Instructor: Dr. Hamed Farbeh <span class="date">Sep 2025 &ndash; Feb 2026</span></p>
+        <p class="sub">Instructor: Dr. Hamed Farbeh <span class="date">Fall '25</span></p>
         <ul><li>Designed course project and graded student submissions</li></ul>
       </article>
       <article>
-        <h3>Data Structures and Algorithms</h3>
-        <p class="sub">Instructor: Dr. Alireza Bagheri <span class="date">Sep 2025 &ndash; Feb 2026</span></p>
+        <h3>Algorithm Design / Data Structures &amp; Algorithms</h3>
+        <p class="sub">Instructor: Dr. Alireza Bagheri <span class="date">Spring '25, Fall '25</span></p>
         <ul><li>Prepared and graded homework assignments</li></ul>
       </article>
       <article>
-        <h3>Theory of Machines and Languages</h3>
-        <p class="sub">Instructor: Dr. Ameri <span class="date">Feb 2025 &ndash; Sep 2025</span></p>
-        <ul><li>Crafted course projects</li><li>Graded and evaluated student submissions</li></ul>
-      </article>
-      <article>
-        <h3>Algorithm Design</h3>
-        <p class="sub">Instructor: Dr. Alireza Bagheri <span class="date">Feb 2025 &ndash; Sep 2025</span></p>
-        <ul><li>Prepared and graded homework assignments; quiz design</li></ul>
-      </article>
-      <article>
-        <h3>Digital Logic Circuits</h3>
-        <p class="sub">Instructor: Dr. Sahebzamani <span class="date">Feb 2024 &ndash; Sep 2025</span></p>
-        <ul><li>Graded student assignments</li></ul>
-      </article>
-      <article>
-        <h3>Principles of Database Design</h3>
-        <p class="sub">Instructor: Dr. Pourbahman <span class="date">Sep 2024 &ndash; Jan 2025</span></p>
-        <ul><li>Crafted, graded, and evaluated course projects</li></ul>
-      </article>
-      <article>
         <h3>Advanced Programming</h3>
-        <p class="sub">Instructor: Dr. Ziaeetabar <span class="date">Sep 2023 &ndash; Jan 2024</span></p>
+        <p class="sub">Instructor: Dr. Ziaeetabar <span class="date">Fall '23</span></p>
         <ul><li>Created supplementary videos and held make-up sessions</li><li>Created and graded projects</li><li>Held Q&amp;A sessions</li></ul>
       </article>
     </section>
@@ -248,7 +221,7 @@
       <h2>Contact</h2>
       <p>I'm open to research collaborations and graduate opportunities in computer vision, efficient deep learning, and graph learning. The best way to reach me is by email.</p>
       <p><a class="btn primary" href="mailto:bardia112@gmail.com">bardia112@gmail.com</a></p>
-      <!-- TODO: add GitHub / LinkedIn / Google Scholar links here -->
+      <p class="social"><a href="https://github.com/bardia1122">GitHub</a> &middot; <a href="https://www.linkedin.com/in/bardia-sabagh-kermani/">LinkedIn</a></p>
     </section>
   </main>
 

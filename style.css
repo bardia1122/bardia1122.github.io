@@ -174,3 +174,6 @@ footer p { margin: 0; }
   .portrait { width: 130px; height: 130px; }
 }
 @media print { .portrait { width: 90px; height: 90px; box-shadow: none; } }
+
+.links { font-size: 0.9rem; font-weight: 400; margin-left: 6px; }
+.social { margin-top: 12px; }
