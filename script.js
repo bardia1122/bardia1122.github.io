@@ -8,34 +8,49 @@
   }
 
   var toggle = document.getElementById("theme-toggle");
+  function syncLabel() {
+    if (toggle) toggle.textContent = currentTheme() === "dark" ? "Light mode" : "Dark mode";
+  }
   if (toggle) {
+    syncLabel();
     toggle.addEventListener("click", function () {
       var next = currentTheme() === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("theme", next); } catch (e) {}
+      syncLabel();
     });
   }
-
 
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  // Highlight the nav link of the section currently in view.
+  if (!("IntersectionObserver" in window)) {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+    return;
+  }
+
+  // Fade sections in as they enter the viewport.
+  var reveal = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); reveal.unobserve(e.target); }
+    });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+  document.querySelectorAll(".reveal").forEach(function (el) { reveal.observe(el); });
+
+  // Mark the nav link of the section currently in view.
   var links = {};
   document.querySelectorAll("nav a[href^='#']").forEach(function (a) {
     links[a.getAttribute("href").slice(1)] = a;
   });
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        Object.keys(links).forEach(function (k) { links[k].classList.remove("active"); });
-        if (links[e.target.id]) links[e.target.id].classList.add("active");
-      });
-    }, { rootMargin: "-30% 0px -60% 0px" });
-    Object.keys(links).forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) io.observe(el);
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      Object.keys(links).forEach(function (k) { links[k].classList.remove("active"); });
+      if (links[e.target.id]) links[e.target.id].classList.add("active");
     });
-  }
+  }, { rootMargin: "-25% 0px -65% 0px" });
+  Object.keys(links).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) spy.observe(el);
+  });
 })();

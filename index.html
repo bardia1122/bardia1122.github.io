@@ -10,224 +10,255 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/bardia.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
   <script>
+    document.documentElement.classList.add("js");
     try {
       var t = localStorage.getItem("theme");
       if (t) document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=5">
-  <script src="script.js?v=5" defer></script>
+  <link rel="stylesheet" href="style.css?v=6">
+  <script src="script.js?v=6" defer></script>
 </head>
 <body id="top">
-  <header class="hero">
-    <div class="wrap">
-      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle dark mode">&#9680;</button>
-      <div class="hero-grid">
-        <div class="hero-text">
-        <p class="eyebrow">Computer Engineering &middot; Tehran, Iran</p>
-        <h1>Bardia Sabagh Kermani</h1>
-        <p class="tagline">Undergraduate Student, Amirkabir University of Technology</p>
-        <p class="intro">
-          I build and study deep learning systems that run where people actually are: on phones and edge devices.
-          My work spans real-time obstacle detection for pedestrian safety, benchmark datasets, and, more recently,
-          combining LLMs with graph neural networks and knowledge graphs.
-        </p>
-        </div>
-        <img class="portrait" src="assets/bardia.jpg" alt="Portrait of Bardia Sabagh Kermani" width="464" height="443">
-      </div>
-      <div class="cta">
-        <a class="btn primary" href="#contact">Get in touch</a>
-        <a class="btn" href="#research">See my research</a>
-        <a class="btn" href="assets/Bardia_Sabagh_Kermani_CV.pdf" download>Download CV</a>
-      </div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="page">
+    <aside class="side">
+      <img class="portrait" src="assets/bardia.jpg" alt="Portrait of Bardia Sabagh Kermani" width="464" height="443">
+
+      <address class="contact-lines">
+        <span>Tehran, Iran</span>
+        <a href="mailto:bardia112@gmail.com">bardia112@gmail.com</a>
+        <span class="inline-links">
+          <a href="https://github.com/bardia1122">GitHub</a>
+          <a href="https://www.linkedin.com/in/bardia-sabagh-kermani/">LinkedIn</a>
+        </span>
+      </address>
+
       <nav aria-label="Sections">
         <a href="#research">Research</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
         <a href="#teaching">Teaching</a>
-        <a href="#more">More</a>
+        <a href="#skills">Skills</a>
+        <a href="#more">Honors &amp; Courses</a>
         <a href="#contact">Contact</a>
       </nav>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <section class="stats" aria-label="Highlights">
-      <div><strong>3</strong><span>papers on arXiv, under review</span></div>
-      <div><strong>88K+</strong><span>Hugging Face downloads (ROD-Dataset)</span></div>
-      <div><strong>8&times;</strong><span>faster YOLOv8n on a mid-range phone</span></div>
-      <div><strong>4</strong><span>courses as a TA, incl. Head TA</span></div>
-    </section>
+      <div class="side-actions">
+        <a class="cv-link" href="assets/Bardia_Sabagh_Kermani_CV.pdf" download>Download CV <span aria-hidden="true">&darr;</span></a>
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
+      </div>
+    </aside>
 
-    <section id="about">
-      <h2>Research Interests</h2>
-      <ul class="tags">
-        <li>Computer Vision</li>
-        <li>Efficient &amp; On-Device Deep Learning</li>
-        <li>Graph Neural Networks</li>
-        <li>Datasets &amp; Benchmarking</li>
-      </ul>
-    </section>
+    <main id="main">
+      <header class="intro">
+        <p class="role">Undergraduate Student, Computer Engineering</p>
+        <h1>Bardia Sabagh Kermani</h1>
+        <p class="lead">
+          I work on deep learning that runs where people are: on phones and edge devices.
+          My research spans real-time obstacle detection for pedestrian safety, benchmark datasets,
+          and, more recently, combining language models with graph neural networks and knowledge graphs.
+        </p>
+        <p class="interests">
+          <span>Computer Vision</span>
+          <span>Efficient &amp; On-Device Deep Learning</span>
+          <span>Graph Neural Networks</span>
+          <span>Datasets &amp; Benchmarking</span>
+        </p>
+      </header>
 
-    <section id="timeline">
-      <h2>Timeline</h2>
-      <ol class="timeline">
-        <li><span class="when">2026 &ndash; now</span><span class="what">Research Assistant, Data Science Lab: LLMs + GNNs, TxGNN ablation study</span></li>
-        <li><span class="when">2025 &ndash; 2026</span><span class="what">Research Assistant, ICCI Lab: on-device obstacle detection</span></li>
-        <li><span class="when">Nov 2024 &ndash; Nov 2025</span><span class="what">Backend &amp; AI Platform Engineer, Shatel AI</span></li>
-        <li><span class="when">2022 &ndash; Feb 2027</span><span class="what">B.S. Computer Engineering, Amirkabir University of Technology</span></li>
-      </ol>
-    </section>
+      <section id="research" class="reveal">
+        <h2>Research</h2>
 
-    <section id="education">
-      <h2>Education</h2>
-      <article>
-        <h3>B.S. in Computer Engineering</h3>
-        <p class="sub">Amirkabir University of Technology, Tehran, Iran <span class="date">2022 &ndash; Feb 2027 (expected)</span></p>
-        <ul>
-          <li>CGPA: 17.56 / 20 (3.64 / 4.0)</li>
-          <li>Last 64 credits: 18.64 / 20 (3.97 / 4.0)</li>
+        <div class="entry">
+          <p class="when">2026 &ndash; Present</p>
+          <div>
+            <h3>Research Assistant, Data Science Lab</h3>
+            <p class="where">Advisor: Dr. Mostafa Chehreghani</p>
+            <ul>
+              <li>Researching LLM integration into GNNs and knowledge graphs.</li>
+              <li>Conducting an ablation study of TxGNN (Nature Medicine, 2024), testing whether its zero-shot drug-repurposing gains stem from prior clinical knowledge rather than learned GNN representations (comment paper in preparation).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <p class="when">2025 &ndash; 2026</p>
+          <div>
+            <h3>Research Assistant, Intelligent Computing &amp; Communication Infrastructure Lab (ICCI)</h3>
+            <p class="where">Advisor: Dr. Hamed Farbeh</p>
+            <p>Real-time, on-device obstacle detection for pedestrian safety; three manuscripts under review, all available on arXiv.</p>
+          </div>
+        </div>
+
+        <h3 class="subhead">Manuscripts under review</h3>
+        <ol class="papers">
+          <li class="paper">
+            <p class="authors">A. Zandi, S. Nami, R. Ganjipour, <strong>B. Sabagh Kermani</strong>, A. Tarabkhah, H. Farbeh</p>
+            <p class="title">Real-Time Obstacle Detection and Distance Estimation on Smartphones for Visually Impaired and Distracted Pedestrians</p>
+            <p class="venue">Submitted to <a href="https://ietresearch.onlinelibrary.wiley.com/journal/23983396"><em>IET Cyber-Physical Systems: Theory &amp; Applications</em></a></p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2611.00040">arXiv</a><a href="https://github.com/Real-time-Obstacle-Detector/Android-Application">Code</a></p>
+            <p class="role-note"><em>My role.</em> Contributed to implementing the early-exit heads, and implemented ARCore depth-based distance estimation with a monocular focal-length fallback and the on-device benchmarks. The compressed YOLOv8n ran up to 8&times; faster on a mid-range phone (3.2 s &rarr; 0.39 s); the recommended setup runs at 0.42&ndash;0.48 s with 0.81 recall.</p>
+          </li>
+          <li class="paper">
+            <p class="authors">A. Zandi, A. Azami, <strong>B. Sabagh Kermani</strong>, P. Abbasian, R. Ganjipour, S. Nami, H. Farbeh</p>
+            <p class="title">ROD-Dataset: A Pedestrian-Perspective Benchmark of 25 Urban Obstacle Classes for YOLO-Based Detection</p>
+            <p class="venue">Submitted to <a href="https://link.springer.com/journal/11042"><em>Multimedia Tools and Applications</em></a></p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2611.00681">arXiv</a><a href="https://www.kaggle.com/datasets/abtinzandi/obstacle-detection-dataset">Kaggle</a><a href="https://huggingface.co/datasets/Abtinzandi/Obstacle-Detection-Dataset-YOLO">Hugging Face</a></p>
+            <p class="role-note">24,326 images and 40,195 annotated instances across 25 classes, merging 29 public collections with street-level imagery captured in Tehran and Toronto. Benchmarks six YOLO generations (v8&ndash;v26), showing that recall and mAP rankings disagree. Open source (MIT) with 88K+ Hugging Face downloads. <em>My role.</em> Collected and annotated part of the field-captured imagery.</p>
+          </li>
+          <li class="paper">
+            <p class="authors">A. Zandi, A. Ashrafi, S. Nami, S. S. Neghahban, A. Entezari, P. Abbasian, A. Azami, P. Taherzadeh, <strong>B. Sabagh Kermani</strong>, R. Ganjipour, H. Farbeh</p>
+            <p class="title">From White Canes to Edge AI: A Survey of Assistive Navigation Technologies for Blind and Low-Vision Individuals</p>
+            <p class="venue">Submitted to <a href="https://www.tandfonline.com/journals/iidt20/"><em>Disability and Rehabilitation: Assistive Technology</em></a></p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2611.00671">arXiv</a></p>
+            <p class="role-note">PRISMA-based review of 108 studies (2008&ndash;2026) in a four-era taxonomy. <em>My role.</em> Contributed the literature review of lightweight YOLO methods (pruning, quantization, attention) for its edge-optimization synthesis.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="education" class="reveal">
+        <h2>Education</h2>
+        <div class="entry">
+          <p class="when">2022 &ndash; Feb 2027 <span>(expected)</span></p>
+          <div>
+            <h3>B.S. in Computer Engineering</h3>
+            <p class="where">Amirkabir University of Technology, Tehran, Iran</p>
+            <ul>
+              <li>CGPA: 17.56 / 20 (3.64 / 4.0)</li>
+              <li>Last 64 credits: 18.64 / 20 (3.97 / 4.0)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="reveal">
+        <h2>Work Experience</h2>
+        <div class="entry">
+          <p class="when">Nov 2024 &ndash; Nov 2025</p>
+          <div>
+            <h3>Backend &amp; AI Platform Engineer</h3>
+            <p class="where"><a href="https://ai.shatel.ir">Shatel AI</a>, Tehran</p>
+            <ul>
+              <li>Co-architected and deployed production RAG chatbot platforms (vector retrieval + LLM inference) for Sales, Support, and Lead Generation.</li>
+              <li>Built high-concurrency API infrastructure (REST/gRPC/WebSocket, Redis, PostgreSQL) with full observability of latency and AI service health.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="reveal">
+        <h2>Notable Project</h2>
+        <div class="entry">
+          <p class="when"><a href="https://github.com/bardia1122/IO_motion">GitHub</a></p>
+          <div>
+            <h3>IO Motion: On-Device Pose Estimation &amp; Fitness Analysis</h3>
+            <p>Android app (Kotlin, MediaPipe Pose Landmarker) analyzing squats, sit-ups, push-ups, and planks from live camera or video: rep counting, biomechanical KPI scoring, fully offline.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="teaching" class="reveal">
+        <h2>Teaching Assistantships</h2>
+
+        <div class="entry">
+          <p class="when">Fall '25, Spring '26</p>
+          <div>
+            <h3>Data Mining <span class="badge">Head TA</span></h3>
+            <p class="where">Instructor: Dr. Ehsan Nazerfard</p>
+            <ul>
+              <li>Led TA team; designed &amp; graded HWs, quizzes, and exams.</li>
+              <li>Conducted supplementary teaching sessions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <p class="when">Fall '25</p>
+          <div>
+            <h3>Microprocessor and Assembly Language</h3>
+            <p class="where">Instructor: Dr. Hamed Farbeh</p>
+            <ul><li>Designed course project and graded student submissions.</li></ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <p class="when">Spring '25, Fall '25</p>
+          <div>
+            <h3>Algorithm Design / Data Structures &amp; Algorithms</h3>
+            <p class="where">Instructor: Dr. Alireza Bagheri</p>
+            <ul><li>Prepared and graded homework assignments.</li></ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <p class="when">Fall '23</p>
+          <div>
+            <h3>Advanced Programming</h3>
+            <p class="where">Instructor: Dr. Ziaeetabar</p>
+            <ul>
+              <li>Created supplementary videos and held make-up sessions.</li>
+              <li>Created and graded projects.</li>
+              <li>Held Q&amp;A sessions.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="reveal">
+        <h2>Skills &amp; Expertise</h2>
+        <dl class="skills">
+          <dt>Computer Vision &amp; Deep Learning</dt>
+          <dd>PyTorch, Ultralytics/YOLO, Object Detection, Pose Estimation, Model Compression, PyG</dd>
+          <dt>Programming Languages</dt>
+          <dd>Python, Kotlin, Java, C/C++</dd>
+          <dt>Technologies &amp; Tools</dt>
+          <dd>Docker, Prometheus, Grafana, Git, LaTeX</dd>
+        </dl>
+      </section>
+
+      <section id="more" class="reveal">
+        <h2>Honors, Courses &amp; Languages</h2>
+
+        <h3 class="subhead">Honors &amp; Awards</h3>
+        <ul class="plain">
+          <li>Placed 6th in the Fito Hackathon, a national Data Science &amp; Image Processing competition.</li>
+          <li>Ranked among the top 10 contestants in the AlgoCup coding competition.</li>
         </ul>
-      </article>
-    </section>
 
-    <section id="research">
-      <h2>Research Experience</h2>
-
-      <article>
-        <h3>Research Assistant, Data Science Lab</h3>
-        <p class="sub">Advisor: Dr. Mostafa Chehreghani <span class="date">2026 &ndash; Present</span></p>
-        <ul>
-          <li>Researching LLM integration into GNNs and knowledge graphs.</li>
-          <li>Conducting an ablation study of TxGNN (Nature Medicine, 2024), testing whether its zero-shot drug-repurposing gains stem from prior clinical knowledge rather than learned GNN representations (comment paper in preparation).</li>
+        <h3 class="subhead">Courses &amp; Certifications</h3>
+        <ul class="plain">
+          <li>CS231N: Deep Learning for Computer Vision, Stanford (Fei-Fei Li), online</li>
+          <li>CS236: Deep Generative Models, Stanford (Stefano Ermon), online</li>
+          <li>CS224W: Machine Learning with Graphs, Stanford (Jure Leskovec), online</li>
+          <li>Big Data Analysis (graduate course; grade 18/20), AUT (Dr. Mostafa Chehreghani)</li>
         </ul>
-      </article>
 
-      <article>
-        <h3>Research Assistant, Intelligent Computing &amp; Communication Infrastructure Lab (ICCI)</h3>
-        <p class="sub">Advisor: Dr. Hamed Farbeh <span class="date">2025 &ndash; 2026</span></p>
-        <p>Real-time, on-device obstacle detection for pedestrian safety; three manuscripts under review, all available on arXiv (listed below).</p>
-      </article>
-
-      <h3 class="subhead">Manuscripts Under Review <small>Preprints on arXiv</small></h3>
-      <ol class="papers">
-        <li>
-          A. Zandi, S. Nami, R. Ganjipour, <strong>B. Sabagh Kermani</strong>, A. Tarabkhah, H. Farbeh.
-          <strong>Real-Time Obstacle Detection and Distance Estimation on Smartphones for Visually Impaired and Distracted Pedestrians.</strong>
-          Submitted to <em><a href="https://ietresearch.onlinelibrary.wiley.com/journal/23983396">IET Cyber-Physical Systems: Theory &amp; Applications</a></em>.
-          <span class="links"><a href="https://arxiv.org/abs/2611.00040">arXiv</a> &middot; <a href="https://github.com/Real-time-Obstacle-Detector/Android-Application">Code</a></span>
-          <p class="role"><em>My role:</em> contributed to implementing the early-exit heads, and implemented ARCore depth-based distance estimation with a monocular focal-length fallback and the on-device benchmarks; the compressed YOLOv8n ran up to 8&times; faster on a mid-range phone (3.2 s &rarr; 0.39 s), recommended setup at 0.42&ndash;0.48 s with 0.81 recall.</p>
-        </li>
-        <li>
-          A. Zandi, A. Azami, <strong>B. Sabagh Kermani</strong>, P. Abbasian, R. Ganjipour, S. Nami, H. Farbeh.
-          <strong>ROD-Dataset: A Pedestrian-Perspective Benchmark of 25 Urban Obstacle Classes for YOLO-Based Detection.</strong>
-          Submitted to <em><a href="https://link.springer.com/journal/11042">Multimedia Tools and Applications</a></em>.
-          <span class="links"><a href="https://arxiv.org/abs/2611.00681">arXiv</a> &middot; <a href="https://www.kaggle.com/datasets/abtinzandi/obstacle-detection-dataset">Kaggle</a> &middot; <a href="https://huggingface.co/datasets/Abtinzandi/Obstacle-Detection-Dataset-YOLO">Hugging Face</a></span>
-          <p class="role">24,326 images and 40,195 annotated instances across 25 classes, merging 29 public collections with street-level imagery captured in Tehran and Toronto. Benchmarked six YOLO generations (v8&ndash;v26), showing recall and mAP rankings disagree; open source (MIT) with 88K+ Hugging Face downloads.</p>
-          <p class="role"><em>My role:</em> collected and annotated part of the field-captured imagery.</p>
-        </li>
-        <li>
-          A. Zandi, A. Ashrafi, S. Nami, S. S. Neghahban, A. Entezari, P. Abbasian, A. Azami, P. Taherzadeh, <strong>B. Sabagh Kermani</strong>, R. Ganjipour, H. Farbeh.
-          <strong>From White Canes to Edge AI: A Survey of Assistive Navigation Technologies for Blind and Low-Vision Individuals.</strong>
-          Submitted to <em><a href="https://www.tandfonline.com/journals/iidt20/">Disability and Rehabilitation: Assistive Technology</a></em>.
-          <span class="links"><a href="https://arxiv.org/abs/2611.00671">arXiv</a></span>
-          <p class="role">PRISMA-based review of 108 studies (2008&ndash;2026) in a four-era taxonomy; contributed the literature review of lightweight YOLO methods (pruning, quantization, attention) for its edge-optimization synthesis.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="experience">
-      <h2>Work Experience</h2>
-      <article>
-        <h3>Backend &amp; AI Platform Engineer, <a href="https://ai.shatel.ir">Shatel AI</a></h3>
-        <p class="sub">Tehran <span class="date">Nov 2024 &ndash; Nov 2025</span></p>
-        <ul>
-          <li>Co-architected and deployed production RAG chatbot platforms (vector retrieval + LLM inference) for Sales, Support, and Lead Generation.</li>
-          <li>Built high-concurrency API infrastructure (REST/gRPC/WebSocket, Redis, PostgreSQL) with full observability of latency and AI service health.</li>
+        <h3 class="subhead">Languages</h3>
+        <ul class="plain">
+          <li>English (TOEFL iBT 5.5/6.0; 110/120 on the previous scale)</li>
+          <li>Persian (native)</li>
         </ul>
-      </article>
-    </section>
+      </section>
 
-    <section id="projects">
-      <h2>Notable Project</h2>
-      <article>
-        <h3>IO Motion: On-Device Pose Estimation &amp; Fitness Analysis <a class="links" href="https://github.com/bardia1122/IO_motion">GitHub</a></h3>
-        <p>Android app (Kotlin, MediaPipe Pose Landmarker) analyzing squats, sit-ups, push-ups, and planks from live camera or video: rep counting, biomechanical KPI scoring, fully offline.</p>
-      </article>
-    </section>
+      <section id="contact" class="reveal">
+        <h2>Contact</h2>
+        <p class="lead small">I'm open to research collaborations and graduate opportunities in computer vision, efficient deep learning, and graph learning. The best way to reach me is by email.</p>
+        <p class="contact-big"><a href="mailto:bardia112@gmail.com">bardia112@gmail.com</a></p>
+        <p class="paper-links"><a href="https://github.com/bardia1122">GitHub</a><a href="https://www.linkedin.com/in/bardia-sabagh-kermani/">LinkedIn</a></p>
+      </section>
 
-    <section id="skills">
-      <h2>Skills &amp; Expertise</h2>
-      <dl>
-        <dt>Computer Vision &amp; Deep Learning</dt>
-        <dd>PyTorch, Ultralytics/YOLO, Object Detection, Pose Estimation, Model Compression, PyG</dd>
-        <dt>Programming Languages</dt>
-        <dd>Python, Kotlin, Java, C/C++</dd>
-        <dt>Technologies &amp; Tools</dt>
-        <dd>Docker, Prometheus, Grafana, Git, LaTeX</dd>
-      </dl>
-    </section>
-
-    <section id="teaching">
-      <h2>Teaching Assistantships</h2>
-      <article>
-        <h3>Data Mining (Head TA)</h3>
-        <p class="sub">Instructor: Dr. Ehsan Nazerfard <span class="date">Fall '25, Spring '26</span></p>
-        <ul><li>Led TA team; designed &amp; graded HWs, quizzes, and exams</li><li>Conducted supplementary teaching sessions</li></ul>
-      </article>
-      <article>
-        <h3>Microprocessor and Assembly Language</h3>
-        <p class="sub">Instructor: Dr. Hamed Farbeh <span class="date">Fall '25</span></p>
-        <ul><li>Designed course project and graded student submissions</li></ul>
-      </article>
-      <article>
-        <h3>Algorithm Design / Data Structures &amp; Algorithms</h3>
-        <p class="sub">Instructor: Dr. Alireza Bagheri <span class="date">Spring '25, Fall '25</span></p>
-        <ul><li>Prepared and graded homework assignments</li></ul>
-      </article>
-      <article>
-        <h3>Advanced Programming</h3>
-        <p class="sub">Instructor: Dr. Ziaeetabar <span class="date">Fall '23</span></p>
-        <ul><li>Created supplementary videos and held make-up sessions</li><li>Created and graded projects</li><li>Held Q&amp;A sessions</li></ul>
-      </article>
-    </section>
-
-    <section id="more">
-      <h2>Courses &amp; Certifications</h2>
-      <ul>
-        <li>CS231N: Deep Learning for Computer Vision, Stanford (Fei-Fei Li) &mdash; online</li>
-        <li>CS236: Deep Generative Models, Stanford (Stefano Ermon) &mdash; online</li>
-        <li>CS224W: Machine Learning with Graphs, Stanford (Jure Leskovec) &mdash; online</li>
-        <li>Big Data Analysis (Graduate Course; Grade: 18/20), AUT (Dr. Mostafa Chehreghani)</li>
-      </ul>
-
-      <h2>Honors &amp; Awards</h2>
-      <ul>
-        <li>Placed 6th in the Fito Hackathon, a national Data Science &amp; Image Processing competition.</li>
-        <li>Ranked among the top 10 contestants in the AlgoCup coding competition.</li>
-      </ul>
-
-      <h2>Spoken Languages</h2>
-      <ul>
-        <li>English (TOEFL iBT 5.5/6.0; 110/120 on the previous scale)</li>
-        <li>Persian (native)</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>I'm open to research collaborations and graduate opportunities in computer vision, efficient deep learning, and graph learning. The best way to reach me is by email.</p>
-      <p><a class="btn primary" href="mailto:bardia112@gmail.com">bardia112@gmail.com</a></p>
-      <p class="social"><a href="https://github.com/bardia1122">GitHub</a> &middot; <a href="https://www.linkedin.com/in/bardia-sabagh-kermani/">LinkedIn</a></p>
-    </section>
-  </main>
-
-  <footer class="wrap">
-    <p>&copy; <span id="year">2026</span> Bardia Sabagh Kermani &middot; Last updated October 2026</p>
-    <a href="#top" class="to-top">Back to top &uarr;</a>
-  </footer>
+      <footer>
+        <p>&copy; <span id="year">2026</span> Bardia Sabagh Kermani &middot; Last updated November 2026</p>
+        <a href="#top">Back to top &uarr;</a>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
