@@ -7,19 +7,24 @@
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
 
-  var toggle = document.getElementById("theme-toggle");
-  function syncLabel() {
-    if (toggle) toggle.textContent = currentTheme() === "dark" ? "Light mode" : "Dark mode";
-  }
-  if (toggle) {
-    syncLabel();
-    toggle.addEventListener("click", function () {
-      var next = currentTheme() === "dark" ? "light" : "dark";
-      root.setAttribute("data-theme", next);
-      try { localStorage.setItem("theme", next); } catch (e) {}
-      syncLabel();
+  var buttons = document.querySelectorAll("[data-set-theme]");
+  function syncButtons() {
+    var cur = currentTheme();
+    buttons.forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-set-theme") === cur));
     });
   }
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var next = b.getAttribute("data-set-theme");
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      syncButtons();
+    });
+  });
+  syncButtons();
+  // Follow the system setting until the visitor picks a theme explicitly.
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", syncButtons);
 
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();

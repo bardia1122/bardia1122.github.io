@@ -20,11 +20,16 @@
       if (t) document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=7">
-  <script src="script.js?v=7" defer></script>
+  <link rel="stylesheet" href="style.css?v=8">
+  <script src="script.js?v=8" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
+
+  <div class="theme-switch" role="group" aria-label="Color theme">
+    <button type="button" data-set-theme="light" aria-pressed="false">Light</button>
+    <button type="button" data-set-theme="dark" aria-pressed="false">Dark</button>
+  </div>
 
   <div class="page">
     <aside class="side">
@@ -53,7 +58,6 @@
 
       <div class="side-actions">
         <a class="cv-link" href="assets/Bardia_Sabagh_Kermani_CV.pdf" download>Download CV <span aria-hidden="true">&darr;</span></a>
-        <button id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
       </div>
     </aside>
 

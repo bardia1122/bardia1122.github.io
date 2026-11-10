@@ -110,11 +110,6 @@ nav a.active::before { width: 22px; margin-right: 10px; background: var(--accent
 .side-actions { margin-top: auto; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; font-family: var(--sans); font-size: .8rem; }
 .cv-link { padding: 9px 16px; border: 1px solid var(--ink); border-radius: 2px; font-weight: 500; letter-spacing: .02em; }
 .cv-link:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-#theme-toggle {
-  font: inherit; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer;
-  border-bottom: 1px solid var(--rule);
-}
-#theme-toggle:hover { color: var(--accent); }
 
 /* ---- Intro ---- */
 
@@ -262,3 +257,24 @@ footer a { border-color: var(--rule); }
   section { break-inside: avoid-page; margin-top: 20px; padding-top: 20px; }
   a { border: 0; }
 }
+
+/* ---- Theme switch ---- */
+
+.theme-switch {
+  position: fixed; top: 18px; right: 22px; z-index: 5;
+  display: flex; padding: 3px; gap: 2px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--rule); border-radius: 999px;
+  font: 500 .72rem/1 var(--sans); letter-spacing: .06em;
+}
+.theme-switch button {
+  font: inherit; letter-spacing: inherit; color: var(--muted);
+  background: none; border: 0; border-radius: 999px;
+  padding: 7px 13px; cursor: pointer; transition: background .2s, color .2s;
+}
+.theme-switch button:hover { color: var(--ink); }
+.theme-switch button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+@media (max-width: 1000px) { .theme-switch { top: 12px; right: 14px; } }
+@media print { .theme-switch { display: none; } }
